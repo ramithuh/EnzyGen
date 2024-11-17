@@ -1,0 +1,5 @@
+build/**
+data/**
+**.so
+**.pyc
+fairseq.egg-info/**

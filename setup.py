@@ -210,6 +210,8 @@ def do_setup(package_data):
             "torch",
             "tqdm",
             "bitarray",
+            'PyYAML>=5.1,<6.0',
+            'setuptools>=50.2.0,<51.0.0'
         ],
         dependency_links=dependency_links,
         packages=find_packages(
