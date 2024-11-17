@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
+export CUDA_VISIBLE_DEVICES=0,1,2,3
 
 data_path=data/enzyme_substrate_data_lucky_best.json
 
@@ -11,7 +11,7 @@ output_path=$local_root/enzygen_substrate
 python3 -m torch.distributed.launch fairseq_cli/train.py ${data_path} \
 --profile \
 --num-workers 0 \
---distributed-world-size 8 \
+--distributed-world-size 4 \
 --save-dir ${output_path} \
 --task geometric_protein_design \
 --dataset-impl-source "raw" \
